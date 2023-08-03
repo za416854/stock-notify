@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaiwanMarketReportService } from 'src/app/core/service/api/taiwan-market-report.service';
 
 @Component({
   selector: 'app-tw-stock',

@@ -9,6 +9,7 @@ import { UsStockComponent } from './pages/us-stock/us-stock.component';
 import { MyFavouriteStockComponent } from './pages/my-favourite-stock/my-favourite-stock.component';
 import { PriceNotifySettingComponent } from './pages/price-notify-setting/price-notify-setting.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
