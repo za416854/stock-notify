@@ -22,11 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
   public getUserName(): string {
-<<<<<<< HEAD
     this.userName = '克里斯';
-=======
-    this.userName = '胡克里斯';
->>>>>>> ba60dc010e0ba83a8105423705bbbf0e03cf34da
     return this.userName;
   }
 
