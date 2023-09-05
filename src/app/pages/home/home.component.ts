@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   public userName!: string;
   public weightedIndexTW!: string;
 
-
   constructor(private marketReportService: TaiwanMarketReportService) { }
 
   ngOnInit(): void {
