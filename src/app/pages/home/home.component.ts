@@ -9,7 +9,11 @@ import { TaiwanMarketReportService } from 'src/app/core/service/api/taiwan-marke
 export class HomeComponent implements OnInit {
 
   public userName!: string;
-  public weightedIndexTW!: string;
+  public taiwanIdxName!: string;
+  public taiwanIdx!: string;
+  public affectedPoints!: string;
+  public affectedPercentage!: string;
+
 
   constructor(private marketReportService: TaiwanMarketReportService) { }
 
@@ -26,9 +30,14 @@ export class HomeComponent implements OnInit {
   }
 
   public getStockDataTW(data: any): void {
-    console.warn('所有大盤統計資訊:', data);
-    const taiwanMain = data[1];
-    this.weightedIndexTW = taiwanMain['收盤指數'];
+    const taiwanMarket = data['result'];
+    console.warn('所有大盤統計資訊:', taiwanMarket);
+    console.warn('taiwanMain物件:', JSON.parse(taiwanMarket)[1]['指數']);
+    this.taiwanIdxName = JSON.parse(taiwanMarket)[1]['指數'];
+    console.warn('taiwanMain物件:', JSON.parse(taiwanMarket)[1]['收盤指數']);
+    this.taiwanIdx = JSON.parse(taiwanMarket)[1]['收盤指數'];
+    this.affectedPoints = JSON.parse(taiwanMarket)[1]['漲跌點數'];
+    this.affectedPercentage = JSON.parse(taiwanMarket)[1]['漲跌百分比'];
   }
 
 }

@@ -145,7 +145,7 @@ export class APITree {
   static path = {
     api: {
       TaiwanStock: {
-        get_GetTaiwanMarket: 'https:' + '//localhost:44376/api/TaiwanMarket',
+        get_GetTaiwanMarket: 'http:' + '//localhost:5005/api/DailyTaiwanStock',
       }
     }
   };
