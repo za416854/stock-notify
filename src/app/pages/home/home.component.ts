@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
   public getStockDataTW(data: any): void {
     const taiwanMarket = data['result'];
     console.warn('所有大盤統計資訊:', taiwanMarket);
-
     this.taiwanIdxName = JSON.parse(taiwanMarket)[1]['指數'];
     this.taiwanIdx = JSON.parse(taiwanMarket)[1]['收盤指數'];
     this.affectedPoints = JSON.parse(taiwanMarket)[1]['漲跌點數'];
