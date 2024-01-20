@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   public getUserName(): string {
-    this.userName = '胡胡克里斯';
+    this.userName = '胡克里斯';
     return this.userName;
   }
 
